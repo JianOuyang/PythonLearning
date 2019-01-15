@@ -4,8 +4,8 @@ def KelvinToFahrenheit(Temperature):
 	try:
 		assert (Temperature >= 0),"Colder than absolute zero!"
 		return ((Temperature-273)*1.8)+32
-	except AssertionError:
-		print('some assert error')
+	except AssertionError as e:
+		print(e)
 
 print(KelvinToFahrenheit(273))
 print(int(KelvinToFahrenheit(505.78)))
@@ -22,8 +22,8 @@ def stopiterator_error():
 		print(next(iteratorli))
 		print(next(iteratorli))
 		print(next(iteratorli))
-	except StopIteration:
-		print('the iterator value is all showed')
+	except StopIteration as e:
+		print(e)
 	except:
 		print('the basic exception')
 
@@ -32,47 +32,47 @@ def runtime_error():
 		li = generate_list()
 		for item in li:
 			print(item)
-	except RuntimeError:
-		print('the Runtime wrong ')
+	except RuntimeError as e:
+		print(e)
 
 def attribute_error(num):
 	try:
 		a = 12
 		a.pdwsfe()
-	except AttributeError:
-		print('the wrong Attribute')
+	except AttributeError as e:
+		print(e)
 	except:
 		print('the basic exception')
 
 def value_error(num):
 	try:
 		int(num)
-	except ValueError:
-		print('the wrong value')
+	except ValueError as e:
+		print(e)
 	except:
 		print('the basic exception')
 
 def type_error(num):
 	try:
 		a = 12 + num#when the num is str
-	except TypeError:
-		print('the wrong type')
+	except TypeError as e:
+		print(e)
 	except:
 		print('the basic exception')
 
 def zero_error():
 	try:
 		b= 120 / 0
-	except ZeroDivisionError:
-		print('the dividied can not be zero')
+	except ZeroDivisionError as e:
+		print(e)
 	except:
 		print('the basic exception')
 
 def name_error():
 	try:
 		print(v)
-	except NameError:
-		print('the identifier is not found')
+	except NameError as e:
+		print(e)
 	except:
 		print('the basic exception')
 
